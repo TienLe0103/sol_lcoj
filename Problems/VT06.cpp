@@ -1,5 +1,5 @@
 /*
-    @date: 05 / 05 / 2024
+    @date: 07 / 05 / 2024
     @tienle0103
 */
 
@@ -11,6 +11,7 @@
 #include <cmath>
 #include <stack>
 #include <queue>
+#include <iomanip>
 
 using namespace std;
 
@@ -39,12 +40,14 @@ int dy[] = {0, 1, 0, -1};
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-    int n, x; cin >> n >> x;
-    int res = 0;
-    vi a(n); 
-    for (int &c : a) {
-        cin >> c;
-        if (c == x) res++;
+    int n, c = 0; cin >> n;
+    db avg = 0;
+    vi a(n);
+    for (int &x : a) {
+        cin >> x;
+        if (x % 2 != 0)
+            avg += x,
+            c++;
     }
-    cout << res;
+    cout << fixed << setprecision(4) << avg / c;
 }

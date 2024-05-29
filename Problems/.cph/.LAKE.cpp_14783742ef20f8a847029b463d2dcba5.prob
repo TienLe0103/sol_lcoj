@@ -1,0 +1,1 @@
+{"name":"Local: LAKE","url":"d:\\aiosima\\luyencode\\Problems\\LAKE.cpp","tests":[{"id":1715652036666,"input":"3 4 5\n3 2\n2 2\n3 1\n2 3\n1 1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\LAKE.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: VT11","url":"d:\\aiosima\\luyencode\\Problems\\VT11.cpp","tests":[{"id":1716802718710,"input":"5\n5 3 2 4 1","output":"5 2 3 4 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\VT11.cpp","group":"local","local":true}

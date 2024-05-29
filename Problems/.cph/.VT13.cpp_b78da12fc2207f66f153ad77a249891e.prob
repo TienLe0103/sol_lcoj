@@ -1,0 +1,1 @@
+{"name":"Local: VT13","url":"d:\\aiosima\\luyencode\\Problems\\VT13.cpp","tests":[{"id":1716874056561,"input":"5\n3 2 -1 2 4\n","output":"4 3"},{"id":1716874060324,"input":"6\n1 2 6 1 6 2\n","output":"6 2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\VT13.cpp","group":"local","local":true}

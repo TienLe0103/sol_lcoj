@@ -1,0 +1,1 @@
+{"name":"Local: TTBFS","url":"d:\\aiosima\\luyencode\\Problems\\TTBFS.cpp","tests":[{"id":1715622808602,"input":"7 7\n1 2\n1 3\n1 5\n2 4\n2 6\n3 7\n5 6","output":"1\n2\n3\n5\n4\n6\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\TTBFS.cpp","group":"local","local":true}
