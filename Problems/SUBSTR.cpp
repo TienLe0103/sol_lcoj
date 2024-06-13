@@ -1,6 +1,5 @@
-
 /*
-    @date: 29 . 05 . 2024
+    @date: 09 . 06 . 2024
     @tienle0103
 */
 
@@ -33,17 +32,21 @@ typedef pair<int, int> ii;
 cs int N   = 1e6 + 5;
 cs int oo  = 1e18;
 
-int n, a[N];
-ii res = {-696969, -696969};
+str a, b;
+
+int solve(str a, str b) {
+    int n = a.size(), m = b.size();
+    vector<vi> f(n+1, vi(m+1, 0));
+    frr (i, 1, n) 
+        frr (j, 1, m) {
+            if (a[i - 1] == b[j - 1]) f[i][j] = f[i - 1][j - 1] + 1;
+            else f[i][j] = max(f[i - 1][j], f[i][j - 1]);
+        }
+    return f[n][m];
+}
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-    cin >> n;
-    fr (i, 0, n) cin >> a[i];
-    res = {a[0], a[1]};
-    fr (i, 0, n - 1) 
-        if (a[i] + a[i + 1] >= res.fi + res.se)
-            res = {a[i], a[i + 1]};
-    if (a[n - 1] + a[0] > res.fi + res.se) cout << a[n - 1] << ' ' << a[0];
-    else cout << res.fi << ' ' << res.se;
+    cin >> a >> b;  
+    cout << solve(a, b);
 }

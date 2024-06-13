@@ -1,0 +1,1 @@
+{"name":"Local: DUYNO","url":"d:\\aiosima\\luyencode\\Problems\\DUYNO.cpp","tests":[{"id":1717057590495,"input":"12345\n123541\n","output":"NO\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\DUYNO.cpp","group":"local","local":true}

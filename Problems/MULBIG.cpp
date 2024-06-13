@@ -1,6 +1,5 @@
-
 /*
-    @date: 29 . 05 . 2024
+    @date: 10 . 06 . 2024
     @tienle0103
 */
 
@@ -33,17 +32,36 @@ typedef pair<int, int> ii;
 cs int N   = 1e6 + 5;
 cs int oo  = 1e18;
 
-int n, a[N];
-ii res = {-696969, -696969};
+str a, b;
+
+str meow(str a, str b) {
+    int l1 = a.size(), l2 = b.size(), x = 0, y = 0;
+    if (l1 == 0 || l2 == 0) return "0";
+    vi res(l1 + l2, 0);
+    fd (i, l1 - 1, 0) {
+        int ram = 0;
+        int c1 = a[i] - '0';
+        y = 0;
+        fd (j, l2 - 1, 0) {
+            int c2 = b[j] - '0';
+            int add = c1 * c2 + res[x + y] + ram;
+            ram = add / 10;
+            res[x + y] = add % 10;
+            y++;
+        }
+        if (ram > 0) res[x + y] += ram;
+        x++;
+    }
+    int find = res.size() - 1;
+    while (find >= 0 && res[find] == 0) find--;
+    if (find == -1) return "0";
+    str s = "";
+    while (find >= 0) s += to_string(res[find--]);
+    return s;
+}
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-    cin >> n;
-    fr (i, 0, n) cin >> a[i];
-    res = {a[0], a[1]};
-    fr (i, 0, n - 1) 
-        if (a[i] + a[i + 1] >= res.fi + res.se)
-            res = {a[i], a[i + 1]};
-    if (a[n - 1] + a[0] > res.fi + res.se) cout << a[n - 1] << ' ' << a[0];
-    else cout << res.fi << ' ' << res.se;
+    cin >> a >> b;
+    cout << meow(a, b);
 }

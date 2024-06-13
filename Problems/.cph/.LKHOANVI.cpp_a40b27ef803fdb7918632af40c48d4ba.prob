@@ -1,0 +1,1 @@
+{"name":"Local: LKHOANVI","url":"d:\\aiosima\\organization\\luyencode\\Problems\\LKHOANVI.cpp","tests":[{"id":1718010085381,"input":"3\n","output":"1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\organization\\luyencode\\Problems\\LKHOANVI.cpp","group":"local","local":true}

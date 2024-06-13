@@ -1,0 +1,1 @@
+{"name":"Local: TAMGIAC","url":"d:\\aiosima\\luyencode\\Problems\\TAMGIAC.cpp","tests":[{"id":1717556988993,"input":"3 4 5\n","output":"12 6.00\n"},{"id":1717557016465,"input":"3 8 5\n","output":"NO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\TAMGIAC.cpp","group":"local","local":true}

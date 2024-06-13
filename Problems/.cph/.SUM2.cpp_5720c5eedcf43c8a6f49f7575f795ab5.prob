@@ -1,0 +1,1 @@
+{"name":"Local: SUM2","url":"d:\\aiosima\\luyencode\\Problems\\SUM2.cpp","tests":[{"id":1717047130438,"input":"2\n","output":"5"},{"id":1717047136278,"input":"10\n","output":"385"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\luyencode\\Problems\\SUM2.cpp","group":"local","local":true}

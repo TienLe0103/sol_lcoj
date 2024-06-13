@@ -1,0 +1,1 @@
+{"name":"Local: SUBSTR","url":"d:\\aiosima\\organization\\luyencode\\Problems\\SUBSTR.cpp","tests":[{"id":1717939077078,"input":"abc1def2ghi3\nabcdefghi123\n","output":"10\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\aiosima\\organization\\luyencode\\Problems\\SUBSTR.cpp","group":"local","local":true}

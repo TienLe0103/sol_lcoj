@@ -1,4 +1,3 @@
-
 /*
     @date: 29 . 05 . 2024
     @tienle0103
@@ -34,16 +33,14 @@ cs int N   = 1e6 + 5;
 cs int oo  = 1e18;
 
 int n, a[N];
-ii res = {-696969, -696969};
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
     cin >> n;
-    fr (i, 0, n) cin >> a[i];
-    res = {a[0], a[1]};
-    fr (i, 0, n - 1) 
-        if (a[i] + a[i + 1] >= res.fi + res.se)
-            res = {a[i], a[i + 1]};
-    if (a[n - 1] + a[0] > res.fi + res.se) cout << a[n - 1] << ' ' << a[0];
-    else cout << res.fi << ' ' << res.se;
+    frr (i, 1, n) cin >> a[i];
+    sort(a + 1, a + n + 1);
+    cout << max({a[1] * a[2] * a[3], 
+                 a[n] * a[n - 1] * a[n - 2], 
+                 a[1] * a[2] * a[n],
+                 a[n] * a[n - 1] * a[1]});
 }

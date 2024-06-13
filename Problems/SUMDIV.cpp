@@ -1,6 +1,5 @@
-
 /*
-    @date: 29 . 05 . 2024
+    @date: 30 . 05 . 2024
     @tienle0103
 */
 
@@ -33,17 +32,25 @@ typedef pair<int, int> ii;
 cs int N   = 1e6 + 5;
 cs int oo  = 1e18;
 
-int n, a[N];
-ii res = {-696969, -696969};
+int t, n;
+
+int solve(int x) {
+    int res = 0;
+    frr (i, 1, sqrt(x)) {
+        if (x % i == 0) {
+            res += i;
+            if (i != x / i)
+                res += x / i;
+        }
+    }
+    return res;
+}
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-    cin >> n;
-    fr (i, 0, n) cin >> a[i];
-    res = {a[0], a[1]};
-    fr (i, 0, n - 1) 
-        if (a[i] + a[i + 1] >= res.fi + res.se)
-            res = {a[i], a[i + 1]};
-    if (a[n - 1] + a[0] > res.fi + res.se) cout << a[n - 1] << ' ' << a[0];
-    else cout << res.fi << ' ' << res.se;
+    cin >> t;
+    while (t--) {
+        cin >> n;
+        cout << solve(n) << '\n';
+    }
 }

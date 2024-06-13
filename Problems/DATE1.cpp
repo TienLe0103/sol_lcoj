@@ -1,6 +1,5 @@
-
 /*
-    @date: 29 . 05 . 2024
+    @date: 10 . 06 . 2024
     @tienle0103
 */
 
@@ -33,17 +32,37 @@ typedef pair<int, int> ii;
 cs int N   = 1e6 + 5;
 cs int oo  = 1e18;
 
-int n, a[N];
-ii res = {-696969, -696969};
+int d, y, m = 1;
+
+bool rizz(int y) {
+    return y % 400 == 0 || (y % 4 == 0 && y % 100 != 0);
+}
+
+int meow(int month, int year) {
+    switch (month) {
+        case 1: return 31;
+        case 2: return rizz(y) ? 29 : 28;
+        case 3: return 31;
+        case 4: return 30;
+        case 5: return 31;
+        case 6: return 30;
+        case 7: return 31;
+        case 8: return 31;
+        case 9: return 30;
+        case 10: return 31;
+        case 11: return 30;
+        case 12: return 31;
+        default: return 0;
+    }
+}
+
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-    cin >> n;
-    fr (i, 0, n) cin >> a[i];
-    res = {a[0], a[1]};
-    fr (i, 0, n - 1) 
-        if (a[i] + a[i + 1] >= res.fi + res.se)
-            res = {a[i], a[i + 1]};
-    if (a[n - 1] + a[0] > res.fi + res.se) cout << a[n - 1] << ' ' << a[0];
-    else cout << res.fi << ' ' << res.se;
+    cin >> d >> y;
+    while (d > meow(m, y)) {
+        d -= meow(m, y);
+        m++;
+    }
+    cout << d << ' ' << m;
 }

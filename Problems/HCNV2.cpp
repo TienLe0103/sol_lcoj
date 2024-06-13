@@ -1,6 +1,5 @@
-
 /*
-    @date: 29 . 05 . 2024
+    @date: 13 . 06 . 2024
     @tienle0103
 */
 
@@ -33,17 +32,14 @@ typedef pair<int, int> ii;
 cs int N   = 1e6 + 5;
 cs int oo  = 1e18;
 
-int n, a[N];
-ii res = {-696969, -696969};
+ii a, b, c, d;
 
 signed main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-    cin >> n;
-    fr (i, 0, n) cin >> a[i];
-    res = {a[0], a[1]};
-    fr (i, 0, n - 1) 
-        if (a[i] + a[i + 1] >= res.fi + res.se)
-            res = {a[i], a[i + 1]};
-    if (a[n - 1] + a[0] > res.fi + res.se) cout << a[n - 1] << ' ' << a[0];
-    else cout << res.fi << ' ' << res.se;
+    cin >> a.fi >> a.se >> b.fi >> b.se >> c.fi >> c.se >> d.fi >> d.se;
+    ii l = {min(a.fi, b.fi), min(c.fi, d.fi)};
+    ii r = {max(a.fi, b.fi), max(c.fi, d.fi)};
+    ii u = {min(a.se, b.se), min(c.se, d.se)};
+    ii v = {max(a.se, b.se), max(c.se, d.se)};
+    cout << ((max(l.fi, l.se) < min(r.fi, r.se) && max(u.fi, u.se) < min(v.fi, v.se)) ? (min(r.fi, r.se) - max(l.fi, l.se)) * (min(v.fi, v.se) - max(u.fi, u.se)) : 0);
 }
